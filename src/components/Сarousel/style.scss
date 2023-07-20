@@ -1,0 +1,39 @@
+.Carousel {
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-content: center;
+
+
+
+    &-arrow {
+
+        width: 20px;
+        height: 100%;
+        
+
+        svg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill: black;
+            width: 20px;
+        }
+    }
+
+
+    &-main-container {
+        width: 100%;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items:center;
+
+        gap: 25px;
+
+        margin-bottom: 30px;
+    }
+
+}

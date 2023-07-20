@@ -1,0 +1,15 @@
+.login-fragment {
+    &-phrase {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #031c3d;
+        white-space: pre-line;
+    }
+
+    &-subphrase {
+        font-size: 1.25rem;
+        padding: 16px 0;
+        color: #37476a;
+    }
+}

@@ -1,0 +1,24 @@
+.Card{
+    border-radius: 20px !important;
+
+    &-title{
+        display: flex;
+        justify-content: center;
+        color: black;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &-content{
+        background-color: white;
+        color: black;
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+
+    &-desc{
+
+    }
+    
+}

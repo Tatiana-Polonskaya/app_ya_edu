@@ -1,0 +1,64 @@
+.apllication{
+    &-header{
+        width: 100%;
+        
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &-title{
+            font-family: "Onest";
+            font-weight: 500;
+            color: #7c8eb5;
+
+        }
+
+        &-status{
+            font-family: "Onest";
+            font-weight: 500;
+            color: white;
+            
+            border-radius: 16px;
+            padding: 8px 10px;
+            margin-right: 10px;
+        }
+
+        &-message {
+            flex-grow: 1;
+
+
+            &-text {
+                display: flex;
+                flex-flow: row nowrap;
+                gap: 6px;
+                color: #F35B60;
+                font-size: 16px;
+                font-family: "Onest";
+                padding: 4px 12px;
+                border-radius: 6px;
+                background: rgba(243, 91, 96, 0.05);
+
+
+            }
+
+        }
+    }
+
+    &-date{
+        padding: 20px 0;
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    &-row{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 15px;
+
+    }
+
+
+}

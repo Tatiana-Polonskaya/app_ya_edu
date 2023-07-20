@@ -1,0 +1,103 @@
+.ModalWindow {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  animation-name: appear;
+  animation-duration: 300ms;
+
+  &-dialog {
+    border-radius: 25px;
+    width: auto;
+    max-width: auto;
+    background: white;
+    position: relative;
+    margin: 0 20px;
+    max-height: calc(100vh - 100px);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.3s;
+    animation-name: slide-in;
+    animation-duration: 0.3s;
+  }
+
+  &-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 1rem 1.5rem 0 1.5rem;
+    gap: 10px;
+
+    &-title {
+      font-family: 'Montserrat Alternates';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1em;
+      color: #37476A;
+      flex-grow: 1;
+    }
+
+    &-icon {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+
+      &-close {
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  &-body {
+    overflow: auto;
+  }
+
+  &-content {
+    padding: 1rem;
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-10px);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+

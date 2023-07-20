@@ -1,0 +1,66 @@
+.carouse-item{
+    display: flex;
+    flex-flow: column nowrap;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 180px;
+
+    &-img-block{
+        height: 120px;
+        width: 120px;
+        overflow: hidden;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: relative;
+        background-size: 120px 120px;
+        border-radius: 100% 100% 100% 100%;
+    }
+    &-video-block{
+        height: 120px;
+        width: 120px;
+        border-radius: 100%;
+        overflow: hidden;
+        -o-object-fit: cover;
+        object-fit: cover;
+        position: relative;
+
+        video {
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+
+    &-button{
+        position: absolute;
+        display: flex;
+        top: 47px;
+        left: 45px;
+        z-index: 1;
+
+        
+        justify-content: center;
+        align-items: center;
+
+        img{
+            height: 32px;
+            width: 32px;
+        }
+        
+    }
+
+    p{
+        padding-top: 10px;
+        font-family: Onest;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #000000;
+
+    }
+    
+}
+
