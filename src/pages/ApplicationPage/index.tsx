@@ -29,22 +29,17 @@ import Rating from "@mui/material/Rating";
 
 const stepInProgress = [
   {
-    label: "Select campaign settings",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    label: "Подпишись на новости группы",
+    description: `Для оперативного реагирования на новости и изменения тебе необходимо подписаться на ВК группу, по адресу ...`,
   },
   {
-    label: "Create an ad group",
+    label: "Собери пакет документов",
     description:
-      "An ad group contains one or more ads which target a shared set of keywords.",
+      "Чтобы принять участие, тебе необходимо распечать и заполнить заявку по адресу https://...",
   },
   {
-    label: "Create an ad",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    label: "Отправь собранные документы",
+    description: `Отправь подготовленные документы на почту организатору example@gmail.com (В теме письма название мероприятия). `,
   },
 ];
 
@@ -65,6 +60,16 @@ const stepFail = [
               If you run into any problems with your ads, find out how to tell if
               they're running and how to resolve approval issues.`,
   },
+];
+
+const messageAim = "Не забудь выполнить все задания до дедлайна";
+
+const questions = [
+  "Как ты оцениваешь образовательную программу форума?",
+  "Как ты оцениваешь культурную программу форума?",
+  "Насколько удобно тебе было общаться с волонтерами и организаторами через установленные средства связи?",
+  "Насколько подходящая была площадка проведения?",
+  "Было ли возможно выполнять поставленные требования на форуме?",
 ];
 
 const isStepFailed = 1;
@@ -88,15 +93,6 @@ export default function ApplicationPage() {
     setActiveStep(0);
   };
 
-  const messageAim = "Не забудь выполнить все задания до дедлайна";
-
-  const questions = [
-    "Как ты оцениваешь образовательную программу форума?",
-    "Как ты оцениваешь культурную программу форума?",
-    "Насколько удобно тебе было общаться с волонтерами и организаторами через установленные средства связи?",
-    "Насколько подходящая была площадка проведения?",
-    "Было ли возможно выполнять поставленные требования на форуме?",
-  ];
   const [valuesRating, setValueRating] = useState([0, 0, 0, 0, 0]);
 
   const setNewValueById = (newvalue: number, position: number) => {
@@ -140,16 +136,12 @@ export default function ApplicationPage() {
                 {stepInProgress.map((step, index) => (
                   <Step key={step.label}>
                     <StepLabel
-                      optional={
-                        index === 2 ? (
-                          <Typography variant="caption">Назад</Typography>
-                        ) : null
-                      }
+                      
                     >
-                      {step.label}
+                      <div className={cnApplication("title-bold")}>{step.label}</div>
                     </StepLabel>
                     <StepContent>
-                      <Typography>{step.description}</Typography>
+                      <Typography><div className={cnApplication("title")}>{step.description}</div></Typography>
                       <Box sx={{ mb: 2 }}>
                         <div>
                           <Button
@@ -208,14 +200,14 @@ export default function ApplicationPage() {
             </div>
           </AccordionSummary>
           <AccordionDetails>
-            <div>
+            <div className={cnApplication("title-bold")}>
               Побывал на форуме? Оставь небольшой отзыв, это займет не более 2-х
               минут
             </div>
             <div>
               {questions.map((el, idx) => (
                 <div className={cnApplication("row")}>
-                  <span>
+                  <span  className={cnApplication("title")}>
                     {idx + 1}. {el}
                   </span>{" "}
                   <Rating
@@ -229,7 +221,7 @@ export default function ApplicationPage() {
 
               <MobileStepper
                 variant="dots"
-                steps={6}
+                steps={2}
                 position="static"
                 activeStep={activeStep}
                 sx={{ maxWidth: 400, flexGrow: 1 }}
@@ -289,18 +281,15 @@ export default function ApplicationPage() {
                 {stepFail.map((step, index) => (
                   <Step key={step.label}>
                     <StepLabel
-                      optional={
-                        index === 2 ? (
-                          <Typography variant="caption">Прошлый шаг</Typography>
-                        ) : null
-                      }
+                      
                       error={isStepFailed === index}
                     >
-                      {step.label}
+                      <div className={cnApplication("title-bold")}>{step.label}</div>
+                      
                     </StepLabel>
 
                     <StepContent>
-                      <Typography>{step.description}</Typography>
+                    <Typography><div className={cnApplication("title")}>{step.description}</div></Typography>
                       {isStepFailed === index && (
                         <div className={cnApplication("header-message-text")}>
                           Упс, кажется поздно!

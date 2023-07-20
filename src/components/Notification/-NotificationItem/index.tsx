@@ -36,7 +36,7 @@ export default function NotificationItem({title,description,type,status,linkTitl
             <div className={cnNotificationItem("col")}>
                 <div className={cnNotificationItem("title",{white:type===TYPE_NOTIFICATION.LINK})}>{title}</div>
                 <div className={cnNotificationItem("description",{white:type===TYPE_NOTIFICATION.LINK})}>{description}</div>
-               {type===TYPE_NOTIFICATION.LINK && (<div className={cnNotificationItem("link")} onClick={()=>navigate(RoutesEnum.SETTINGS)}>{linkTitle}<ReactSVG src={arrowIcon} wrapper="span" className={cnNotificationItem("link-icon")}/></div>)} 
+               {type===TYPE_NOTIFICATION.LINK && (<div className={cnNotificationItem("link")} onClick={()=>navigate(RoutesEnum.APPLICATIONS)}>{linkTitle}<ReactSVG src={arrowIcon} wrapper="span" className={cnNotificationItem("link-icon")}/></div>)} 
             </div>
         </div>
     );

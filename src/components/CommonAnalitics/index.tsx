@@ -70,18 +70,17 @@ export function convertTotalData(
 export const getTotalTitle = (value: string): string => {
   switch (value) {
     case "connectedness":
-      return "связность";
+      return "Школьники";
     case "argumentativeness":
-      return "аргументированность";
+      return "Junior специалисты";
     case "clarity":
-      return "ясность";
+      return "ML";
     case "dynamism":
-      return "динамизм";
+      return "Менеджмент";
     case "persuasiveness":
-      return "убедительность";
+      return "Дизайн";
     case "communicative":
-      return `соблюдение \n
-			коммуникативной нормы`;
+      return `IT`;
     default:
       return "";
   }
@@ -106,22 +105,21 @@ const images = [
   {
     label: "San Francisco – Oakland Bay Bridge, United States",
     imgPath:
-      "https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://sun9-74.userapi.com/impg/EoN2eugN8-0Yow43nJXTdPIF2XZXLGmTATUiTQ/NsLrCOJ8heI.jpg?size=1280x720&quality=95&sign=9f33e6bde9a4839f9d2815f0f2442f85&type=album",
   },
   {
     label: "Bird",
     imgPath:
-      "https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://sun9-70.userapi.com/impg/q3llgOjz4DitMN9M95FWUfUVGn-0KIEsouLJMQ/UaBthAziILY.jpg?size=1280x720&quality=95&sign=03c6c4fcbc7e19195b136eb263658af2&type=album",
   },
   {
     label: "Bali, Indonesia",
     imgPath:
-      "https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250",
-  },
+      "https://sun9-66.userapi.com/impg/Me9GPtAO8mNW_EmpdB-Zc7A6mcNXYZu6f_1KIg/-kjHi1liey4.jpg?size=1280x720&quality=95&sign=3a34ddae0ec1be038360b842700dab9e&type=album" },
   {
     label: "Goč, Serbia",
     imgPath:
-      "https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60",
+      "https://sun1-56.userapi.com/impg/0cGIp91hrdXT8T_uWwSy26ypz7azmfz4bCMdLg/u7KEQKBL0jU.jpg?size=1280x720&quality=95&sign=b014e9165200c00df51173c9df01b0e9&type=album",
   },
 ];
 
@@ -156,28 +154,15 @@ export default function CommonAnalitics() {
 
   return (
     <div className={cnCommon("col")}>
-<div className={cnCommon("row")}>
+      <div className={cnCommon("row")}>
         <span className={cnCommon("title-big")}>
           {/* <ReactSVG src={noteSvg} className={cnCommon("title-icon")} /> */}
           Область будущего
         </span>
       </div>
 
+      <Box sx={{ flexGrow: 1, borderRadius:"20px", overflow:"hidden" }}>
 
-      <Box sx={{ flexGrow: 1 }}>
-        <Paper
-          square
-          elevation={0}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            height: 50,
-            pl: 2,
-            bgcolor: "background.default",
-          }}
-        >
-          <Typography>{images[activeStep].label}</Typography>
-        </Paper>
         <AutoPlaySwipeableViews
           axis={theme.direction === "rtl" ? "x-reverse" : "x"}
           index={activeStep}
@@ -190,7 +175,7 @@ export default function CommonAnalitics() {
                 <Box
                   component="img"
                   sx={{
-                    height: 255,
+                    height: 300,
                     display: "block",
 
                     overflow: "hidden",

@@ -13,12 +13,9 @@
             height: auto;
             overflow: hidden;
             max-height: 450px;
+            width: 100%;
+            object-fit: cover 
 
-            video{
-                max-height: 450px;
-                // height: auto !important;
-                // width: 800px !important;
-            }
         }
 
         &-description {

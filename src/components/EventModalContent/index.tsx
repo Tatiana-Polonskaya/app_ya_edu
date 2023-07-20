@@ -29,27 +29,27 @@ export default function EventModalContent({modalEvent}: Props) {
     const { setModal } = useContext(ModalWindowContext);
 
     const totalVideoInfo = [
-        10, 20, 30, 50, 40, 90
+        88, 60, 34, 20, 73, 99
     ]
     
     let criteria =  [
         {
-            title: "связность",
+            title: "Школьники",
         },
         {
-            title: "убедительность",
+            title: "Junior специалисты",
         },
         {
-            title: "аргументированность",
+            title: "ML",
         },
         {
-            title: "ясность",
+            title: "Менеджмент",
         },
         {
-            title: "динамизм",
+            title: "Дизайн",
         },
         {
-            title: "привлечение внимания аудитории",
+            title: "IT",
         },
     ];
 
@@ -67,7 +67,7 @@ export default function EventModalContent({modalEvent}: Props) {
 
             <div className={cnModalContent("video-row")}>
                 <div className={cnModalContent("video-row-videoplayer")}>
-                    <img src={modalEvent.image} alt={modalEvent.title}/>
+                    <img className={cnModalContent("video-row-videoplayer")} src={modalEvent.image} alt={modalEvent.title}/>
                 </div>
                 <div className={cnModalContent("video-row-description")}>
                     <div

@@ -7,6 +7,7 @@ import images from "./icons";
 import "./style.scss";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import logo from "./icons/logo.svg"
 
 import { useState } from "react";
 import logoutImg from "./ModalExit/img/logout.svg";
@@ -79,8 +80,8 @@ export default function Menu() {
 
     return (
         <div className={cnMenu()}>
-            <div className={cnMenu("logo")}>Logo</div>
-            {/* <ReactSVG src={iconSrc} className={cnMenu("logo")} /> */}
+            {/* <div className={cnMenu("logo")}>Logo</div> */}
+            <ReactSVG src={logo} className={cnMenu("logo")} />
             <ul>
                 {items.map((props, idx) => (
                     <li key={idx}>

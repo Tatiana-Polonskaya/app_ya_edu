@@ -34,8 +34,8 @@ export default function Notification() {
                                 Сегодня
                             </div>
                             <NotificationItem
-                                title="Взгляните на свой прогресс!"
-                                description="В Дневнике обновилась статистика, пора узнать результат!"
+                                title="Появились новые мероприятия!"
+                                description="На главное страницы добавились мероприятия, которые могут быть тебе интересны!"
                                 type={TYPE_NOTIFICATION.NOTICE}
                                 status={true}
                                 linkTitle=""
@@ -44,11 +44,11 @@ export default function Notification() {
                                 Вчера
                             </div>
                             <NotificationItem
-                                title="У вас заканчиваются репетиции!"
-                                description="Осталось всего 2 репетиции. Выберите тариф, чтобы продолжить совершенствовать свои навыки."
+                                title="Скоро мероприятие!"
+                                description="У тебя осталось всего неделя, чтобы выполнить задания для заявки на форум!"
                                 type={TYPE_NOTIFICATION.LINK}
                                 status={false}
-                                linkTitle="Выбрать тариф"
+                                linkTitle="Подробнее"
                             /></>) : <div className={cnNotification("content-date")}>Нет новых уведомлений</div>}
                             
                         </div>

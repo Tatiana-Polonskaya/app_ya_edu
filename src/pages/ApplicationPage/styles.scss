@@ -60,5 +60,16 @@
 
     }
 
+    &-title{
+        font-family: "Onest";
+        font-weight: 400;
+        color: #7c8eb5;
+
+        &-bold{
+            font-weight: 600;
+            color: #7c8eb5;
+        }
+    }
+
 
 }

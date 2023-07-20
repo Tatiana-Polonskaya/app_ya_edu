@@ -25,7 +25,7 @@ export default function ActionCard(props: Props) {
         <CardMedia
           component="img"
           height="140"
-          image="https://kartinkin.net/uploads/posts/2022-12/1670264258_58-kartinkin-net-p-kot-kartinki-vkontakte-61.jpg"
+          image={props.image}
           alt="green iguana"
         />
         <CardContent className={cnCard("content")}>
@@ -33,8 +33,7 @@ export default function ActionCard(props: Props) {
           {props.title}
           </Typography>
           <Typography variant="body2" className={cnCard("desc")}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+          {props.desc.substring(0, 120)}...
           </Typography>
         </CardContent>
       </CardActionArea>
