@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Application for participants of the Competence Center events
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<b>Project objective:</b> create a service for cooperation between the competence center and event participants for active promotion of projects among young people.
+
+<b>Project tasks:</b> collecting data about the participants of the event, search for events, communication of organizers with participants and candidates, collection of applications and selection, deadlines for submitting applications, reminding participants about it, feedback on the event and a system for matching events to a certain type.
 
 ## Available Scripts
 
